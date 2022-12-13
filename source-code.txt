@@ -1,0 +1,87 @@
+Question 2
+
+SOURCE CODE:
+
+#include <stdio.h>
+
+int main(){
+
+    char arr[100];
+    int i;
+
+    printf("Give Input : ");
+    scanf("%s", arr);
+
+    for(i=0; i<strlen(arr); i++){
+      if(arr[i]>='a' && arr[i]<='z'){
+         arr[i]=arr[i]-32;
+      }
+    }
+
+    printf("%s",arr);
+
+} 
+
+__________________________________________
+
+Question 4
+
+SOURCE CODE:
+
+#include <stdio.h>
+
+int main(){
+    int a,b,c=0,d;
+
+    printf("Enter A Integer: ");
+    scanf("%d",&a);
+
+    for(d=a;a!=0;a=a/10){
+         b=a % 10;
+         c=c*10+b;
+    }
+    printf("Reversed Integer Order Is : %d \n",c);
+}
+
+___________________________________________
+
+SOME IMP SOURCE CODE
+
+#include <stdio.h>
+
+int main()
+{
+    int even,lim, sum=0;
+
+
+    printf("Enter The limit For The Sum Of Even Numbers : ");
+    scanf("%d", &lim);
+
+    for(even=2; even<=lim; even+=2)
+    {
+
+        sum += even;
+    }
+
+    printf("\nSum Of All Even Number Between 1 to %d = %d", lim, sum);
+
+
+
+
+    int odd, limit, sums=0;
+
+
+    printf("\n\nEnter The limit For The Sum Of Odd Numbers : ");
+    scanf("%d", &limit);
+
+
+    for(odd=1; odd<=limit; odd+=2)
+    {
+        sums += odd;
+    }
+
+    printf("\nSum Of All Odd Numbers Between 1 to %d = %d", limit, sums);
+
+    return 0;
+}
+
